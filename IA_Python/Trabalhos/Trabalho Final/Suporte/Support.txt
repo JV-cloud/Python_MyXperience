@@ -1,0 +1,45 @@
+Info Whatsapp para suporte no Trabalho Final de Python
+
+
+Comecei a fazer:
+housing.info()
+
+housing.describe()
+
+
+
+housing['ocean_proximity'].value_counts()
+
+
+fig = plt.figure(figsize = (20,15))
+
+ax = fig.gca()
+
+housing.hist(bins = 50, ax = ax)
+
+plt.show()
+
+
+
+train_set, test_set = train_test_split(housing, test_size=0.20, random_state=42)
+
+print("Variáveis de correlação com median_house_value com valores absolutos maior que 0.4:")
+
+housing.corr()['median_house_value'].sort_values(ascending=False).drop('median_house_value').abs()[lambda x: x > 0.4].to_string()
+
+
+alguem fez essa parada ?TODO 4: Manipulação de Atributos categóricos
+7) Utilizando OrdinalEncoder, manipule os valores categóricos para preparar os dados corretamente para algoritmos de machine learning
+trabalho feito no capitulo 2 do livro
+- Hands on ML
+
+na versao de 2019 ele usa o orginalencoder
+
+
+O enconder retorna uma lista de arrays. Eu transformei a lista em DataFrame e atribui a "housing"
+Depois vc vai usar esse algoritmo no proximo item no Pipeline
+Olha o arquivo aula4_hands-on no github do professor. Tem um exemplo igual
+
+
+
+PAREI NA PÁGINA 110 DO LIVRO (TRANSFORMAÇÃO)
