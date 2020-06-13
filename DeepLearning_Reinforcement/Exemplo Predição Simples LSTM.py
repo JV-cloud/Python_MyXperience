@@ -18,13 +18,13 @@ def create_dataset(dataset, look_back=1):
 		a = dataset[i:(i+look_back), 0]
 		dataX.append(a)
 		dataY.append(dataset[i + look_back, 0])
-	return numpy.array(dataX), numpy.array(dataY)
+	return np.array(dataX), np.array(dataY)
 
 np.random.seed(7)
 
 #Carrega o dataset
 #international airline passengers problem with time step regression framing
-dataframe = read_csv('AirPassengers.csv', usecols=[1], engine='python')
+dataframe = read_csv('C:/Users/BRJUVEN1/iCloudDrive/Documents/GitHub/Python_MyXperience/Datasets/AirPassengers.csv', usecols=[1], engine='python')
 X = dataframe.values
 X = X.astype('float32')
 
@@ -75,7 +75,7 @@ print('Test Score: %.2f RMSE' % (testScore))
 
 # shift train predictions for plotting
 trainPredictPlot = np.empty_like(X)
-trainPredictPlot[:, :] = numpy.nan
+trainPredictPlot[:, :] = np.nan
 trainPredictPlot[look_back:len(trainPredict)+look_back, :] = trainPredict
 
 # shift test predictions for plotting

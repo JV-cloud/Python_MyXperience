@@ -11,9 +11,9 @@ import cv2
 # multiple cascades: https://github.com/Itseez/opencv/tree/master/data/haarcascades
 faceCascade = cv2.CascadeClassifier('Cascades/haarcascade_frontalface_default.xml')
 
-cap = cv2.VideoCapture(0)
+#cap = cv2.VideoCapture(0)
 #cap = cv2.VideoCapture('rtsp://admin:Brabb2000@172.16.160.201:554/cam/realmonitor?stream=1')
-#cap = #cv2.VideoCapture('rtsp://172.16.160.202/user=admin&password=Brabb2000&channel=0&stream=0.sdp')
+cap = cv2.VideoCapture('rtsp://172.16.160.202/user=admin&password=Brabb2000&channel=0&stream=0.sdp')
 cap.set(3,640) # set Width
 cap.set(4,480) # set Height
 

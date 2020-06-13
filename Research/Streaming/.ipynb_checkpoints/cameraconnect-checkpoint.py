@@ -11,16 +11,11 @@ import cv2
 # multiple cascades: https://github.com/Itseez/opencv/tree/master/data/haarcascades
 faceCascade = cv2.CascadeClassifier('Cascades/haarcascade_frontalface_default.xml')
 
-#cam = cv2.VideoCapture('/Imaging Devices/PS3Eye Camera')
-cam = cv2.VideoCapture(0)
-#cam = cv2.VideoCapture('rtsp://admin:Brabb2000@172.16.160.201:554/cam/realmonitor?stream=1')
+#cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture('rtsp://admin:Brabb2000@172.16.160.201:554/cam/realmonitor?stream=1')
 #cam = cv2.VideoCapture('rtsp://172.16.160.202/user=admin&password=Brabb2000&channel=1&stream=0.sdp')
 #cam.set(3,640) # set Width
 #cam.set(4,480) # set Height
-
-# Check if the webcam is opened correctly
-if not cam.isOpened():
-    raise IOError("Cannot open the camera")
 
 cv2.namedWindow("My video")
 
